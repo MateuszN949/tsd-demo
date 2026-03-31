@@ -31,15 +31,10 @@ public class User {
         return password;
     }
 
-    // This getter can return null if email is null
+    //TODO - Task 1.2 - This getter should return a main company email if user has no email address.
+    // Use Optional() and orElse() method to handle potential null email
     public String getEmail() {
         return email;
-    }
-
-    //TODO - Task 1.2 - This getter should return a main company email if user has no email address.
-    // Use Optional() to handle potential null email
-    public String safelyGetEmail() {
-        return getEmail();
     }
 
     public String getPhone() {
