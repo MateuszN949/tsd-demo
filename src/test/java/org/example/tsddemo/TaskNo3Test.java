@@ -25,7 +25,7 @@ class TaskNo3Test {
                     "name": "Andrzej",
                     "password": "123456",
                     "email": "andrzej@gmail.com",
-                    "phoneNumber": "+48567123456"
+                    "phone": "+48567123456"
                 }
                 """;
         //when & then
