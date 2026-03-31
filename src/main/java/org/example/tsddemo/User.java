@@ -3,11 +3,9 @@ package org.example.tsddemo;
 public class User {
     private final String name;
     private final String password;
-    //TODO - Task 1.2 - Change email field type so it can handle users without email address
     private final String email;
     private final String phone;
 
-    //TODO - Task 1.2 - You need to modify constructor to handle Users without emails
     public User(String name, String password, String email, String phone) {
         this.name = name;
         this.password = password;
@@ -33,9 +31,15 @@ public class User {
         return password;
     }
 
-    //TODO - Task 1.2 - Modify getter, so it returns company email if user has no email address
+    // This getter can return null if email is null
     public String getEmail() {
         return email;
+    }
+
+    //TODO - Task 1.2 - This getter should return a main company email if user has no email address.
+    // Use Optional() to handle potential null email
+    public String safelyGetEmail() {
+        return getEmail();
     }
 
     public String getPhone() {
