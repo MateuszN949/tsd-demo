@@ -15,12 +15,12 @@ public class User {
 
     //TODO - Task 1.1 - Finish factory method
     static User of(String name, String password, String email, String phone) {
-        return null;
+        return new User(name, password, email, phone);
     }
 
     //TODO - Task 1.3 - Finish another factory method, so it is possible to create User without email
     static User of(String name, String password, String phone) {
-        return null;
+        return new User(name, password, null, phone);
     }
 
     public String getName() {
@@ -34,7 +34,8 @@ public class User {
     //TODO - Task 1.2 - This getter should return a main company email if user has no email address.
     // Use Optional() and orElse() method to handle potential null email
     public String getEmail() {
-        return email;
+        return java.util.Optional.ofNullable(email)
+                .orElse("main@company.com");
     }
 
     public String getPhone() {
